@@ -127,7 +127,7 @@ Contiene variables continuas que representan la señal de audio.
 
 - Datos médicos: Adaptado del conjunto [Insurance (Kaggle)](https://www.kaggle.com/datasets/mirichoi0218/insurance).
 - Textos literarios: Fragmentos del [Project Gutenberg](https://www.gutenberg.org/).
-- Datos de salarios: Derivado del dataset *Current Population Survey (CPS) 1985*, (disponible en repositorios como [Rdatasets](https://vincentarelbundock.github.io/Rdatasets/doc/MosaicData/CPS85.html)).
+- Datos de salarios: Derivado del dataset *Current Population Survey (CPS) 1985*, proporcionado por la librería docente `apafib`.
 - Datos musicales: Dataset de características acústicas para *Music Emotion Recognition (MER)*, proporcionado por la librería docente `apafib`.
 
 
