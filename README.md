@@ -15,9 +15,10 @@ Actualmente incluye:
 2. [Estructura del Repositorio](#estructura-del-repositorio)
 3. [Proyecto 1: Predicción de Costes Médicos](#proyecto-1-predicción-de-costes-médicos)
 4. [Proyecto 2: Evolución de la Literatura](#proyecto-2-evolución-de-la-literatura)
-5. [Buenas Prácticas y Reproducibilidad](#buenas-prácticas-y-reproducibilidad)
-6. [Posibles Extensiones](#posibles-extensiones)
-7. [Licencia y Créditos](#licencia-y-créditos)
+5. [Proyecto 3: Predicción de salarios con MLPs](#proyecto-3-prediccion-de-salarios)
+6. [Buenas Prácticas y Reproducibilidad](#buenas-prácticas-y-reproducibilidad)
+7. [Posibles Extensiones](#posibles-extensiones)
+8. [Licencia y Créditos](#licencia-y-créditos)
 
 ---
 
@@ -27,6 +28,7 @@ Actualmente incluye:
 - Python 
 - scikit-learn
 - numpy / pandas
+- pytorch
 - matplotlib / seaborn
 - statsmodels
 - Biblioteca externa `apafib` (usada para cargar los datasets)
@@ -80,7 +82,22 @@ Fuente textual: Proyecto Gutenberg (fragmentos de 23 autores).
 - Resultados Esperados (Indicativos)
 - Elección de Modelo
 
+## Proyecto 3: Predicción de salarios con MLPs
 
+Notebook: `Wages_code.ipynb`
+
+### Objetivo
+Predecir el salario por hora basándose en características socioeconómicas y laborales como educación, experiencia, edad, horas trabajadas, etc. Se utilizan modelos de Deep Learning.
+
+### Dataset
+Cargado con `load_wages` de `apafib`. 
+Contiene datos de salarios y atributos demográficos para analizar la relación entre capital humano y compensación económica.
+
+### Apartados Abordados
+- Análisis de Heterocedasticidad: Estudio de la variabilidad del salario respecto a variables como nivel educativo o experiencia.
+- Preprocesamiento: División (Train/Val/Test) y escalado Min-Max.
+- Modelado con PyTorch: Implementación desde cero de clases Dataset y bucles de entrenamiento.
+- Experimentación de Arquitecturas: Comparación de MLPs variando la profundidad, anchura (de 32 a 256 neuronas) i funciones de activación (ReLU vs Sigmoid).
 
 
 ## Licencia y Créditos
