@@ -6,6 +6,7 @@ Actualmente incluye:
 
 - `costesMedicos.ipynb`: Predicción de los costes de seguros médicos (variable `charges`) a partir de características demográficas y de estilo de vida.
 - `literatura.ipynb`: Clasificación cronológica de fragmentos literarios para identificar el siglo (XVI–XX) del autor a partir del vocabulario.
+- `Wages_code.ipynb`: Deep Learning predicción de salarios con MLPs
 
 ---
 
