@@ -7,6 +7,7 @@ Actualmente incluye:
 - `costesMedicos.ipynb`: Predicción de los costes de seguros médicos (variable `charges`) a partir de características demográficas y de estilo de vida.
 - `literatura.ipynb`: Clasificación cronológica de fragmentos literarios para identificar el siglo (XVI–XX) del autor a partir del vocabulario.
 - `Wages_code.ipynb`: Deep Learning predicción de salarios con MLPs
+- `emociones_musica.ipynb`: Clasificación de emociones en la música
 
 ---
 
@@ -16,10 +17,11 @@ Actualmente incluye:
 2. [Estructura del Repositorio](#estructura-del-repositorio)
 3. [Proyecto 1: Predicción de Costes Médicos](#proyecto-1-predicción-de-costes-médicos)
 4. [Proyecto 2: Evolución de la Literatura](#proyecto-2-evolución-de-la-literatura)
-5. [Proyecto 3: Predicción de salarios con MLPs](#proyecto-3-prediccion-de-salarios)
-6. [Buenas Prácticas y Reproducibilidad](#buenas-prácticas-y-reproducibilidad)
-7. [Posibles Extensiones](#posibles-extensiones)
-8. [Licencia y Créditos](#licencia-y-créditos)
+5. [Proyecto 3: Predicción de salarios con MLPs](#proyecto-3-predicción-de-salarios)
+6. [Proyecto 4: Clasificación de emociones en la música](#proyecto-4-clasificación-de-emociones-en-la-música)
+7. [Buenas Prácticas y Reproducibilidad](#buenas-prácticas-y-reproducibilidad)
+8. [Posibles Extensiones](#posibles-extensiones)
+9. [Licencia y Créditos](#licencia-y-créditos)
 
 ---
 
@@ -100,10 +102,32 @@ Contiene datos de salarios y atributos demográficos para analizar la relación 
 - Modelado con PyTorch: Implementación desde cero de clases Dataset y bucles de entrenamiento.
 - Experimentación de Arquitecturas: Comparación de MLPs variando la profundidad, anchura (de 32 a 256 neuronas) i funciones de activación (ReLU vs Sigmoid).
 
+## Proyecto 4: Clasificación de emociones en la música
+
+Notebook: `emociones_musica.ipynb`
+
+### Objetivo
+
+Clasificar canciones en cuatro emociones (Happy, Angry, Sad, Relax) basándose en características acústicas extraídas como frecuencia, tempo, energía, etc., comparando el rendimiento de modelos lineales frente a modelos complejos y ensembles.
+
+### Dataset
+Cargado con `load_musica` de la librería `apafib`. 
+Contiene variables continuas que representan la señal de audio.
+
+### Apartados Abordados
+
+- Reducción de Dimensionalidad.
+- Modelos Lineales: Entrenamiento de Regresión Logística y SVM Lineal con GridSearch.
+- Modelos No Lineales: SVM con kernel RBF y Random Forest.
+- Ensemble Learning: Implementación de un Stacking Classifier combinando SVM RBF y Random Forest, utilizando un meta-modelo lineal para la decisión final.
+- Análisis de importancia de atributos para entender qué características acústicas determinan cada emoción.
+
 
 ## Licencia y Créditos
 
 - Datos médicos: Adaptado del conjunto [Insurance (Kaggle)](https://www.kaggle.com/datasets/mirichoi0218/insurance).
 - Textos literarios: Fragmentos del [Project Gutenberg](https://www.gutenberg.org/).
+- Datos de salarios: Derivado del dataset *Current Population Survey (CPS) 1985*, (disponible en repositorios como [Rdatasets](https://vincentarelbundock.github.io/Rdatasets/doc/MosaicData/CPS85.html)).
+- Datos musicales: Dataset de características acústicas para *Music Emotion Recognition (MER)*, proporcionado por la librería docente `apafib`.
 
 
